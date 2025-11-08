@@ -34,6 +34,11 @@ Change timeout (for slow RPCs):
 Monitor in CI with JSON parsing:
    python app.py --count 50 --json > gas_report.json
 
+## Example Output
+🔧 zk-gas-soundness  
+🔗 RPC: https://mainnet.infura.io/v3/...  
+🧱 Blocks to analyze: 10  
+🕒 Timestamp: 2025-11-08T18:21:10Z  
 
 📊 Summary:  
   • Avg Utilization: 84.5%  

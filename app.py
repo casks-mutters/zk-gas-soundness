@@ -30,7 +30,10 @@ def analyze_blocks(w3: Web3, count: int) -> List[Dict[str, Any]]:
     latest = w3.eth.block_number
     blocks: List[Dict[str, Any]] = []
     for i in range(latest - count + 1, latest + 1):
-        print(f"🔍 Analyzing block {i}...")
+         # ✅ New: Show live progress percentage
+        processed = i - (latest - count + 1) + 1
+        percent = (processed / count) * 100
+        print(f"🔍 Analyzing block {i} ({processed}/{count}, {percent:.1f}% complete)...")
         block = fetch_gas_data(w3, i)
         blocks.append(block)
     return blocks
